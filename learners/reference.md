@@ -1,8 +1,8 @@
 ---
-title: 'Reference'
+title: Glossary
 ---
 
-## Glossary
+Feel free to suggest contents to the glossary.
+See [how to contribute](https://github.com/cms-opendata-workshop/workshopqcd-2024-lesson-git/blob/main/CONTRIBUTING.md). 
 
-This is a placeholder file. Please add content here. 
 

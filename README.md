@@ -1,20 +1,41 @@
-# The Carpentries Workbench Template Markdown Lesson
+# Git clinic
 
-This lesson is a template lesson that uses [The Carpentries Workbench][workbench]. 
+## Building the lesson
 
-## Note about lesson life cycle stage
-Although the `config.yaml` states the life cycle stage as pre-alpha, **the template is stable and ready to use**. The life cycle stage is preset to `"pre-alpha"` as this setting is appropriate for new lessons initialised using the template.
+This lesson was built from The Carpentries Workbench template lesson following the [quick-start instructions](https://carpentries.github.io/sandpaper-docs/introduction.html#super-quickstart-copy-a-template-from-github). The repository was created checking the option of including all branches and making it public. 
 
-## Create a new repository from this template
+The content can be edited in the `main` branch and the GitHub actions generate and deploy the site to https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-git/index.html
+No attempt for a local build was made, and in principle, there is no need to install R or Pandoc. Note, however, that the content should be in [Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html). If one wishes to test locally, the instructions are provided in [The Carpentries Workbench][workbench] documentation.
 
-To use this template to start a new lesson repository, 
-make sure you're logged into Github.   
-Visit https://github.com/carpentries/workbench-template-md/generate
-and follow the instructions.
-Checking the 'Include all branches' option will save some time waiting for the first website build
-when your new repository is initialised.
+The setup instructions are in `learners/setup.md` and the separate pages under `episodes`.
 
-If you have any questions, contact [@tobyhodges](https://github.com/tobyhodges)
+The `md-outputs` branch shows after setting up the repository. No need to merge them.
+
+The schedule shows only in the "Instructor view": https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-git/instructor/index.html 
+Use this link if you want to show it.
+
+## Notes
+
+### Documentation
+
+See e.g.
+
+- https://carpentries.github.io/lesson-development-training/
+- https://carpentries.github.io/sandpaper-docs/index.html
+
+
+### Indents and unexpected code blocks
+
+Note that double-indent (two tabs) or anything more that three spaces produces a code block. That's not necessarily what one would expect.
+Also, in some special cases, in nested lists, the second level items might appear as a code block.
+ 
+### Figures
+
+Figures should be located under `episodes/fig`, and included, for example, with
+
+```
+![](fig/portal_screenshot_landing_page.png)
+```
 
 ## Configure a new lesson
 
