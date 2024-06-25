@@ -25,9 +25,9 @@ From the [Git website](https://git-scm.com/):
 
 
 ::::::::::::::::::::::::::::::::::::: callout
-*Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+*Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.*
 
-Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.*
+*Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.*
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -47,7 +47,7 @@ This is not intended as a full tutorial: you will get familiar with some basic c
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Git is a version control system.
-- It is widely used, more than 90% of developers use it.
-- We will use Git during the hands-on sessions to
+- It is widely used, it is the most popular source code management tool.
+- We will use Git during the hands-on sessions to store and share code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
