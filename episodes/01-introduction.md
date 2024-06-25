@@ -6,49 +6,48 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is docker?
+- What is Git?
 - What is the point of these exercises?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Learn about Docker and why we’re using it
+- Learn what is Git and why you should be using it
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## What is Docker?
+## What is Git?
 
-Let's learn about Docker and why we're using it!
+Let's learn about Git Source Code Management (SCM) system, and why we all use it!
 
-Regardless of what you encounter in this lesson, the definitive guide is any 
-official documentation provided by [Docker](https://docs.docker.com/guides/).
-
- From the [Docker website](https://www.docker.com/resources/what-container)
+From the [Git website](https://git-scm.com/):
 
 
 ::::::::::::::::::::::::::::::::::::: callout
-*A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.*
+*Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.*
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Why should I use Git?
 
-In short, Docker allows a user to work in a computing environment that is well defined and has been *frozen* with respect
-to interdependent libraries and code and related tools. The computing environment in the container is separate and independent from your own working area. This means that you do not have to worry about software packages that you might already have installed with a different version. 
+You should use Git for storing and sharing your work.
+
+Your should use Git to version your code.
+
+You should learn Git to be able to contribute to common projects.
 
 ## What can I learn here?
 
-As much as we'd like, we can't give you a *complete* overview of Docker. However, we do hope to explain
-why we run Docker in the way we do so that you gain some understanding. More specifically, we'll
-be showing you how to set up Docker for not just this workshop, but for interfacing with the 
-CMS open data in general
-
+This is not intended as a full tutorial: you will get familiar with some basic concepts, and do some basic hands-on exercising to gain confidence with Git. You will find links to full-fledged lessons, there are many of them!
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Docker is a set of products to deliver and run software in packages called containers.
-- Software containers are widely used these days in both industry and academic research.
-- We use software containers during the hands-on sessions to provide the a well-defined software environment for exercises.
+- Git is a version control system.
+- It is widely used, more than 90% of developers use it.
+- We will use Git during the hands-on sessions to
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
