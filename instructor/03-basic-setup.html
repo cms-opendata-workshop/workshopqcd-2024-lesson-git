@@ -118,11 +118,11 @@
   Git clinic
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 29%" class="percentage">
-    29%
+<aside class="col-md-12 lesson-progress"><div style="width: 15%" class="percentage">
+    15%
   </div>
   <div class="progress ">
-    <div class="progress-bar " role="progressbar" style="width: 29%" aria-valuenow="29" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar " role="progressbar" style="width: 15%" aria-valuenow="15" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -243,6 +243,15 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-exercises.html">4. Exercises</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -286,7 +295,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/02-learning-material-overview.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/04-exercises.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -294,8 +303,8 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Learning Git
         </a>
-        <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
-          Home
+        <a class="chapter-link float-end" href="../instructor/04-exercises.html" rel="next">
+          Next: Exercises... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -324,7 +333,7 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>Do you have Git installed?</li>
 <li>How to configure Git?</li>
-<li>Do you have</li>
+<li>How to connect to GitHub?</li>
 </ul></div>
 </div>
 </div>
@@ -333,9 +342,9 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Have Git installed</li>
-<li>Configure Git user name</li>
+<li>Configure Git user information</li>
 <li>Create a GitHub account</li>
-<li>Create an ssh key to authenticate to GitHub</li>
+<li>Create a SSH key to authenticate to GitHub</li>
 </ul></div>
 </div>
 </div>
@@ -366,8 +375,8 @@ configure user information.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span></code></pre>
 </div>
 <p>If <code>user.name</code> and <code>user.email</code> appear in the
-list, you are all set.</p>
-<p>If not configure user information for with</p>
+list, user configuration is done.</p>
+<p>If not, configure user information with</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -386,10 +395,9 @@ do not have a GitHub account yet, create one by following “Sign up” from
 the <a href="https://github.com/" class="external-link">GitHub homepage</a>. Note that the
 email address should match the one that you configured for local
 Git.</p>
-<p>TODO: check if user.github= is needed in git config.</p>
 </div>
 <div class="section level3">
-<h3 id="generate-an-ssh-key-and-add-it-to-github-for-authentication">Generate an SSH key and add it to GitHub for authentication<a class="anchor" aria-label="anchor" href="#generate-an-ssh-key-and-add-it-to-github-for-authentication"></a></h3>
+<h3 id="generate-a-ssh-key-and-add-it-to-github-for-authentication">Generate a SSH key and add it to GitHub for authentication<a class="anchor" aria-label="anchor" href="#generate-a-ssh-key-and-add-it-to-github-for-authentication"></a></h3>
 <p>To be able to push code to GitHub from your terminal, you will need
 to authenticate. SSH is the recommended method.</p>
 <p>Check if you already have set it up:</p>
@@ -398,7 +406,7 @@ to authenticate. SSH is the recommended method.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre>
 </div>
-<p>It is already done, if you get:</p>
+<p>It is done, if you get:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -434,7 +442,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/02-learning-material-overview.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/04-exercises.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -442,8 +450,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Learning Git
         </a>
-        <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
-          Home
+        <a class="chapter-link float-end" href="../instructor/04-exercises.html" rel="next">
+          Next: Exercises... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>

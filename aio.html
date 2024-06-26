@@ -276,6 +276,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-exercises.html">4. Exercises</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -536,7 +548,7 @@ any links that you are not going to use.
 <ul>
 <li>Do you have Git installed?</li>
 <li>How to configure Git?</li>
-<li>Do you have</li>
+<li>How to connect to GitHub?</li>
 </ul>
 </div>
 </div>
@@ -547,9 +559,9 @@ any links that you are not going to use.
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Have Git installed</li>
-<li>Configure Git user name</li>
+<li>Configure Git user information</li>
 <li>Create a GitHub account</li>
-<li>Create an ssh key to authenticate to GitHub</li>
+<li>Create a SSH key to authenticate to GitHub</li>
 </ul>
 </div>
 </div>
@@ -583,8 +595,8 @@ configure user information.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span></code></pre>
 </div>
 <p>If <code>user.name</code> and <code>user.email</code> appear in the
-list, you are all set.</p>
-<p>If not configure user information for with</p>
+list, user configuration is done.</p>
+<p>If not, configure user information with</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -605,10 +617,9 @@ do not have a GitHub account yet, create one by following “Sign up” from
 the <a href="https://github.com/" class="external-link">GitHub homepage</a>. Note that the
 email address should match the one that you configured for local
 Git.</p>
-<p>TODO: check if user.github= is needed in git config.</p>
 </div>
 <div class="section level3">
-<h3 id="generate-an-ssh-key-and-add-it-to-github-for-authentication">Generate an SSH key and add it to GitHub for authentication<a class="anchor" aria-label="anchor" href="#generate-an-ssh-key-and-add-it-to-github-for-authentication"></a>
+<h3 id="generate-a-ssh-key-and-add-it-to-github-for-authentication">Generate a SSH key and add it to GitHub for authentication<a class="anchor" aria-label="anchor" href="#generate-a-ssh-key-and-add-it-to-github-for-authentication"></a>
 </h3>
 <p>To be able to push code to GitHub from your terminal, you will need
 to authenticate. SSH is the recommended method.</p>
@@ -618,7 +629,7 @@ to authenticate. SSH is the recommended method.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre>
 </div>
-<p>It is already done, if you get:</p>
+<p>It is done, if you get:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -655,6 +666,253 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
+</section></section><section id="aio-04-exercises"><p>Content from <a href="04-exercises.html">Exercises</a></p>
+<hr>
+<p>Last updated on 2024-06-26 |
+        
+        <a href="https://github.com/cms-opendata-workshop/workshopqcd-2024-lesson-git/edit/main/episodes/04-exercises.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How to create a repository?</li>
+<li>What is local, what is remote?</li>
+<li>How to push your updates?</li>
+<li>How to use branches?</li>
+<li>And many more…</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Have Git installed</li>
+<li>Configure Git user name</li>
+<li>Create a GitHub account</li>
+<li>Create an ssh key to authenticate to GitHub</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="create-a-git-repository-from-terminal"><h2 class="section-heading">Create a Git repository from terminal<a class="anchor" aria-label="anchor" href="#create-a-git-repository-from-terminal"></a>
+</h2>
+<hr class="half-width">
+<p>Create a new directory, e.g. <code>git-example</code></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">mkdir</span> git-example</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="bu">cd</span> git-example</span></code></pre>
+</div>
+<p>You can turn it to a Git repository with</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre>
+</div>
+<p>If you have not configured the default branch name, you will get
+this:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch &lt;name&gt;
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m &lt;name&gt;</code></pre>
+</div>
+<div id="exercise-1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-1" class="callout-inner">
+<h3 class="callout-title">Exercise 1<a class="anchor" aria-label="anchor" href="#exercise-1"></a>
+</h3>
+<div class="callout-content">
+<p>If you got the output above, follow this advice and change the branch
+name to <code>main</code> and configue your default initial branch name
+to <code>main</code>.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> main</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Check the status of the repository with</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)</code></pre>
+</div>
+<p>Add a new file to the directory. You can use the following :</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">echo</span> sometext <span class="op">&gt;</span> newfile.txt</span></code></pre>
+</div>
+<div id="exercise-2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-2" class="callout-inner">
+<h3 class="callout-title">Exercise 2<a class="anchor" aria-label="anchor" href="#exercise-2"></a>
+</h3>
+<div class="callout-content">
+<p>Check the status again and <strong>add</strong> the file to be
+committed as instructed in the Git messages.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>Check the status:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        newfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+</div>
+<p>Add the current status of the file to the “staging” area with</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">git</span> add newfile.txt</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Make a version of the repository, i.e. <strong>commit</strong> the
+new file with</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"First version of newfile.txt"</span></span></code></pre>
+</div>
+<p>Flag <code>-m</code> is follow by a commit message. When things go
+wrong, you will learn to appreciate clear and descriptive commit
+message.</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[main (root-commit) 0a0951c] First version of newfile.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfile.txt</code></pre>
+</div>
+<div id="exercise-3" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-3" class="callout-inner">
+<h3 class="callout-title">Exercise 3<a class="anchor" aria-label="anchor" href="#exercise-3"></a>
+</h3>
+<div class="callout-content">
+<p>Find the git command to check the version history. Use e.g. <a href="https://training.github.com/downloads/github-git-cheat-sheet/" class="external-link">Git
+cheat sheet</a>.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>Won’t show it, find it yourself!</p>
+</div>
+</div>
+</div>
+</div>
+<p>Modify the file, e.g.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">echo</span> somenewtext <span class="op">&gt;&gt;</span> newfile.txt</span></code></pre>
+</div>
+<p>Now you can check the differences between the previous version and
+the current status</p>
+</section><section id="create-a-git-repository-from-github-wui"><h2 class="section-heading">Create a Git repository from GitHub WUI<a class="anchor" aria-label="anchor" href="#create-a-git-repository-from-github-wui"></a>
+</h2>
+<hr class="half-width">
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>You can turn any directory to a versioned code repository with
+Git.</li>
+<li>You can upload the content of a local repository to a remote
+repository such as GitHub.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
 </section></section>
 </div>
     </main>
