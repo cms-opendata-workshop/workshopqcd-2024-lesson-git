@@ -244,7 +244,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#create-a-git-repository-from-terminal">Create a Git repository from terminal</a></li>
-<li><a href="#create-a-git-repository-from-github-wui">Create a Git repository from GitHub WUI</a></li>
+<li><a href="#upload-an-existing-local-repository-to-github">Upload an existing local repository to GitHub</a></li>
+<li><a href="#clone-an-existing-repository-from-github">Clone an existing repository from GitHub</a></li>
+<li><a href="#using-branches">Using branches</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -399,7 +401,7 @@ to <code>main</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -450,7 +452,7 @@ committed as instructed in the Git messages.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Check the status:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -516,7 +518,7 @@ cheat sheet</a>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Won’t show it, find it yourself!</p>
 </div>
@@ -529,11 +531,266 @@ cheat sheet</a>.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">echo</span> somenewtext <span class="op">&gt;&gt;</span> newfile.txt</span></code></pre>
 </div>
-<p>Now you can check the differences between the previous version and
-the current status</p>
-</section><section id="create-a-git-repository-from-github-wui"><h2 class="section-heading">Create a Git repository from GitHub WUI<a class="anchor" aria-label="anchor" href="#create-a-git-repository-from-github-wui"></a>
+<p>Now you can check the differences against the previous version:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre>
+</div>
+<div id="exercise-4" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-4" class="callout-inner">
+<h3 class="callout-title">Exercise 4<a class="anchor" aria-label="anchor" href="#exercise-4"></a>
+</h3>
+<div class="callout-content">
+<p>Add and commit your changes as before.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update of newfile.txt"</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="upload-an-existing-local-repository-to-github"><h2 class="section-heading">Upload an existing local repository to GitHub<a class="anchor" aria-label="anchor" href="#upload-an-existing-local-repository-to-github"></a>
 </h2>
-<hr class="half-width"><div id="keypoints1" class="callout keypoints">
+<hr class="half-width"><p>Go to your GitHub area (<a href="https://github.com/%5Byourgithubname%5D" class="external-link uri">https://github.com/[yourgithubname]</a>, choose the
+“Repositories” tab and click on New.</p>
+<p>Choose <code>git-example</code> as the repository and leave other
+options as they are. This will generate an instruction page, and you can
+copy the commands under the title <strong>“…or push an existing
+repository from the command line”</strong>.</p>
+<p>Note that GitHub provides the command to change the branch name to
+<code>main</code> which we did already.</p>
+<p>The <code>git remote add...</code> command</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:<span class="pp">[</span><span class="ss">yourgithubname</span><span class="pp">]</span>/git-example.git</span></code></pre>
+</div>
+<p>defines your new GitHub repository as the remote repository and names
+it as <code>origin</code>. This is a common choice and is used when
+pushing the code in the repository:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+</div>
+<p>The option <code>-u</code> links your local main to the remote main.
+Therefore you only need to do this once.</p>
+<p>You can now check the remote repository location with:</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>origin  git@github.com:[yourgithubname]/git-example.git (fetch)
+origin  git@github.com:[yourgithubname]/git-example.git (push)</code></pre>
+</div>
+<p>Check also that the code has appeared in the GitHub. If you still
+have the instruction page open, click on <code>&lt;&gt; Code</code>
+top-left to see the repository contents.</p>
+<div id="exercise-5" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-5" class="callout-inner">
+<h3 class="callout-title">Exercise 5<a class="anchor" aria-label="anchor" href="#exercise-5"></a>
+</h3>
+<div class="callout-content">
+<p>Create a another GitHub repository following the instructions under
+the title <strong>“…or create a new repository on the command
+line”</strong>.</p>
+<p><strong>Note</strong>: create a new local directory first, do not
+nest Git repositories.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div class="accordion-body">
+<p>Go to your GitHub area (<a href="https://github.com/%5Byourgithubname%5D" class="external-link uri">https://github.com/[yourgithubname]</a>, choose the
+“Repositories” tab and click on New.</p>
+<p>Choose <code>git-example-web</code> as the repository and leave other
+options as they are. This will generate an instruction page, and you can
+copy the commands under the title <strong>“…or create a new repository
+on the command line”</strong>.</p>
+<p>You will notice that the commands are the same what we have done
+above. You can use it if you start from an empty directory.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="clone-an-existing-repository-from-github"><h2 class="section-heading">Clone an existing repository from GitHub<a class="anchor" aria-label="anchor" href="#clone-an-existing-repository-from-github"></a>
+</h2>
+<hr class="half-width"><p>Ask an another participant to provide you their GitHub repository
+address and clone it locally. As we all used the same name, plain
+cloning will fail with</p>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:<span class="pp">[</span><span class="ss">someoneelse</span><span class="pp">]</span>/git-example.git</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>fatal: destination path 'git-example' already exists and is not an empty directory.</code></pre>
+</div>
+<p>Give it another name, e.g. <code>git-example-friend</code></p>
+<div class="codewrapper sourceCode" id="cb22">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:<span class="pp">[</span><span class="ss">someoneelse</span><span class="pp">]</span>/git-example.git git-example-friend</span></code></pre>
+</div>
+<div id="exercise-6" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-6" class="callout-inner">
+<h3 class="callout-title">Exercise 6<a class="anchor" aria-label="anchor" href="#exercise-6"></a>
+</h3>
+<div class="callout-content">
+<p>What is the remote for this local repository?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution6" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
+  <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
+</button>
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div class="accordion-body">
+<p>Git has created a new directory with the chosen name. Move to it and
+check the remote.</p>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="bu">cd</span> git-example-friend/</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="using-branches"><h2 class="section-heading">Using branches<a class="anchor" aria-label="anchor" href="#using-branches"></a>
+</h2>
+<hr class="half-width"><p>If you are using GitHub as a remote storage for your code and you are
+the only contributor, you will most likely push your changes to the
+<code>main</code> branch.</p>
+<p>However, when you contribute to other remote repositories, you would
+always use a branch of your own which can then be merged to the remote
+repo <code>main</code> branch.</p>
+<p>In the <code>git-example-friend</code> repository, create a new
+branch:</p>
+<pre><code>git checkout -b [yourname]-new-feature</code></pre>
+<p>You are free to choose a name, but it is useful agree on some rules
+or practices in a project with several contributors. A common choice is
+something with your name and something that indicates what this branch
+is for.</p>
+<p>You can check the branch with</p>
+<pre><code>git branch</code></pre>
+<p>The star indicates in which branch you are in.</p>
+<div id="exercise-7" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-7" class="callout-inner">
+<h3 class="callout-title">Exercise 7<a class="anchor" aria-label="anchor" href="#exercise-7"></a>
+</h3>
+<div class="callout-content">
+<p>Create a new file in the repository, add and commit it locally and
+then push it to the remote repository.</p>
+<p><strong>Note</strong>: instead of <code>main</code> in
+<code>git push origin main</code>, you will now use your new branch
+name.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution7" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
+  <h4 class="accordion-header" id="headingSolution7"> Show me the solution </h4>
+</button>
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div class="accordion-body">
+<p>Create a file</p>
+<div class="codewrapper sourceCode" id="cb26">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="bu">echo</span> sometext <span class="op">&gt;</span> yourname-file.txt</span></code></pre>
+</div>
+<p>Check the status, add, commit and push:</p>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"[yourname]: some descriptive message"</span></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a><span class="fu">git</span> push origin <span class="pp">[</span><span class="ss">yourname</span><span class="pp">]</span>-new-feature</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="optional-exercise" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="optional-exercise" class="callout-inner">
+<h3 class="callout-title">Optional exercise<a class="anchor" aria-label="anchor" href="#optional-exercise"></a>
+</h3>
+<div class="callout-content">
+<p>Try this for fun: - create a Git repository on your university
+account (or lxplus at CERN if you have an account), add and commit some
+files in it. - clone the repository to your laptop: instead of
+<code>git@github.com:/&lt;repository&gt;.git</code>, use
+<code>youraccount@domain:/full/directory/path</code> in
+<code>git clone</code> - check the remote repository address on your
+laptop - try if you can push changes from your laptop to the remote on
+your university account.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution8" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
+  <h4 class="accordion-header" id="headingSolution8"> Show me the solution </h4>
+</button>
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div class="accordion-body">
+<p>Note that this not necessarily what you would ever do, but it
+illustrates that Git is completely independent from GitHub or
+GitLab.</p>
+<p>Note also that Git does not allow to push to a branch that is checked
+out in the remote repository. You will have to push in another
+branch.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
