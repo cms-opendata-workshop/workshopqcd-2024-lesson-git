@@ -62,7 +62,7 @@ contact: 'k.lassila-perini@cern.ch'
 episodes: 
 - 01-introduction.md
 - 02-learning-material-overview.md
-#- 03-basic-setup.md
+- 03-basic-setup.md
 #- 04-exercises.md
 
 # Information for Learners
