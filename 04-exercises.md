@@ -358,10 +358,14 @@ git pull
 ### Optional exercise 8
 
 Try this for fun:
-- create a Git repository on your university account (or lxplus at CERN if you have an account), add and commit some files in it.
-- clone the repository to your laptop: instead of `git@github.com:/<repository>.git`, use `youraccount@domain:/full/directory/path` in `git clone`
-- check the remote repository address on your laptop
-- try if you can push changes from your laptop to the remote on your university account.
+
+Create a Git repository on your university account (or lxplus at CERN if you have an account), add and commit some files in it.
+
+Clone the repository to your laptop: instead of `git@github.com:/<repository>.git`, use `youraccount@domain:/full/directory/path` in `git clone`.
+
+Check the remote repository address on your laptop.
+
+Try if you can push changes from your laptop to the remote on your university account.
 
 
 :::::::::::::::: solution
