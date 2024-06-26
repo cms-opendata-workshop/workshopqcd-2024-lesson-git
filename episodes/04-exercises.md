@@ -140,6 +140,8 @@ Flag `-m` is follow by a commit message. When things go wrong, you will learn to
  create mode 100644 newfile.txt
 ```
 
+::::::::::::::::::::::::::::::::::::: challenge
+
 ### Exercise 3
 
 Find the git command to check the version history. Use e.g. [Git cheat sheet](https://training.github.com/downloads/github-git-cheat-sheet/).
@@ -152,6 +154,16 @@ Won't show it, find it yourself!
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Modify the file, e.g.
+
+```bash
+echo somenewtext >> newfile.txt
+```
+
+Now you can check the differences between the previous version and the current status
+
 
 
 ## Create a Git repository from GitHub WUI
