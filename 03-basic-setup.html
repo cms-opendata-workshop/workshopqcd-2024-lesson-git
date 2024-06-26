@@ -372,9 +372,9 @@ list, you are all set.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"[name]"</span></span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"[email address]"</span></span></code></pre>
 </div>
-<p>Replace <code>[...]</code> with your input, but keep quotes in the
-command.</p>
-<p>You can read more about configuring in <a href="https://coderefinery.github.io/git-intro/configuration/#configuring-git-command-line-and-editor" class="external-link uri">https://coderefinery.github.io/git-intro/configuration/#configuring-git-command-line-and-editor</a></p>
+<p>Replace <code>[...]</code> with your input, and keep the quotes
+around your name if there are spaces.</p>
+<p>You can read more about configuring Git in <a href="https://coderefinery.github.io/git-intro/configuration/#configuring-git-command-line-and-editor" class="external-link uri">https://coderefinery.github.io/git-intro/configuration/#configuring-git-command-line-and-editor</a></p>
 </section><section id="github"><h2 class="section-heading">GitHub<a class="anchor" aria-label="anchor" href="#github"></a>
 </h2>
 <hr class="half-width"><div class="section level3">
@@ -402,8 +402,14 @@ to authenticate. SSH is the recommended method.</p>
 </h3>
 <pre class="output" tabindex="0"><code>Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
 </div>
-<p>If not, follow the SSH instructions in <a href="https://coderefinery.github.io/installation/ssh/" class="external-link uri">https://coderefinery.github.io/installation/ssh/</a>.</p>
-<div id="keypoints1" class="callout keypoints">
+<p>If not, follow these instructions:</p>
+<ul><li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key" class="external-link">generate
+a SSH key</a></li>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent" class="external-link">add
+the key to a ssh-agent</a></li>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui#adding-a-new-ssh-key-to-your-account" class="external-link">add
+the key to your GitHub account</a></li>
+</ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
