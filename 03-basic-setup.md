@@ -52,9 +52,9 @@ git config --global user.name "[name]"
 git config --global user.email "[email address]"
 ```
 
-Replace `[...]` with your input, but keep quotes in the command.
+Replace `[...]` with your input, and keep the quotes around your name if there are spaces.
 
-You can read more about configuring in https://coderefinery.github.io/git-intro/configuration/#configuring-git-command-line-and-editor
+You can read more about configuring Git in https://coderefinery.github.io/git-intro/configuration/#configuring-git-command-line-and-editor
 
 ## GitHub
 
@@ -81,7 +81,11 @@ It is already done, if you get:
 Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-If not, follow the SSH instructions in https://coderefinery.github.io/installation/ssh/.
+If not, follow these instructions: 
+
+- [generate a SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+- [add the key to a ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+- [add the key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui#adding-a-new-ssh-key-to-your-account)
 
 
 
