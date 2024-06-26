@@ -298,10 +298,11 @@ git branch
 
 The star indicates in which branch you are in.
 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ### Exercise 7
 
-Create a new file in the repository, add and commit it and then push it to the remote repository.
+Create a new file in the repository, add and commit it locally and then push it to the remote repository.
 
 **Note**: instead of `main` in `git push origin main`, you will now use your new branch name.
 
