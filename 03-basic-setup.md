@@ -8,16 +8,16 @@ exercises: 15
 
 - Do you have Git installed?
 - How to configure Git?
-- Do you have 
+- How to connect to GitHub?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Have Git installed
-- Configure Git user name
+- Configure Git user information
 - Create a GitHub account
-- Create an ssh key to authenticate to GitHub
+- Create a SSH key to authenticate to GitHub
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -43,9 +43,9 @@ Check if you have it already with:
 git config --list
 ```
 
-If `user.name` and `user.email` appear in the list, you are all set.
+If `user.name` and `user.email` appear in the list, user configuration is done.
 
-If not configure user information for with
+If not, configure user information with
 
 ```bash
 git config --global user.name "[name]"
@@ -62,9 +62,8 @@ You can read more about configuring Git in https://coderefinery.github.io/git-in
 
 In this workshop, we will use GitHub as a "remote" repository. If you do not have a GitHub account yet, create one by following "Sign up" from the [GitHub homepage](https://github.com/). Note that the email address should match the one that you configured for local Git.
 
-TODO: check if user.github= is needed in git config.
 
-### Generate an SSH key and add it to GitHub for authentication 
+### Generate a SSH key and add it to GitHub for authentication 
 
 To be able to push code to GitHub from your terminal, you will need to authenticate.
 SSH is the recommended method. 
@@ -75,7 +74,7 @@ Check if you already have set it up:
 ssh -T git@github.com
 ```
 
-It is already done, if you get:
+It is done, if you get:
 
 ```output
 Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
