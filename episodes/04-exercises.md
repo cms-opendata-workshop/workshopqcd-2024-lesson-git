@@ -23,7 +23,7 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Create a Git repository from terminal
+## Create a local Git repository
 
 Create a new directory, e.g. `git-example`
 
@@ -38,7 +38,7 @@ You can turn it to a Git repository with
 git init
 ```
 
-If you have not configured the default branch name, you will get this:
+If you have not configured the default branch name, you will see this message:
 
 ```output
 hint: Using 'master' as the name for the initial branch. This default branch name
@@ -57,7 +57,7 @@ hint:   git branch -m <name>
 
 ### Exercise 1
 
-If you got the output above, follow this advice and change the branch name to `main` and configue your default initial branch name to `main`. 
+If you got the output above, follow the advice in the message: change the branch name to `main` and configue your default initial branch name to `main`. 
 
 :::::::::::::::: solution
 
@@ -71,7 +71,7 @@ git branch -m main
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 
-Check the status of the repository with
+Check the status of the repository:
 
 ```bash
 git status
@@ -85,7 +85,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-Add a new file to the directory. You can use the following :
+Now add a new file to the directory. You can use the following:
 
 ```bash
 echo sometext > newfile.txt
@@ -117,7 +117,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Add the current status of the file to the "staging" area with
+Add the file (or a snapshot of it at this moment) to the "staging" area with
 
 ```bash
 git add newfile.txt
@@ -132,13 +132,13 @@ Make a version of the repository, i.e. **commit** the new file with
 git commit -m "First version of newfile.txt"
 ```
 
-Flag `-m` is follow by a commit message. When things go wrong, you will learn to appreciate clear and descriptive commit message.
-
 ```output
 [main (root-commit) 0a0951c] First version of newfile.txt
  1 file changed, 1 insertion(+)
  create mode 100644 newfile.txt
 ```
+
+Flag `-m` is followed by a commit message. When things go wrong, you will learn to appreciate clear and descriptive commit message.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -186,9 +186,11 @@ git commit -m "Update of newfile.txt"
 
 ## Upload an existing local repository to GitHub
 
-Go to your GitHub area (https://github.com/[yourgithubname], choose the "Repositories" tab and click on New.
+For now, your code is only in your local repository. You will now create a remote repository, so that you can store the code there and share it.
 
-Choose `git-example` as the repository and leave other options as they are. This will generate an instruction page, and you can copy the commands under the title **"…or push an existing repository from the command line"**.
+Go to your GitHub area (`https://github.com/[yourgithubname]`), choose the "Repositories" tab and click on New.
+
+Choose `git-example` as the repository name, choose Public and leave other options as they are. This will create the repository and generate an instruction page, and you can copy the commands under the title **"…or push an existing repository from the command line"**.
 
 Note that GitHub provides the command to change the branch name to `main` which we did already.
 
@@ -223,7 +225,7 @@ Check also that the code has appeared in the GitHub. If you still have the instr
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Exercise 5
+### Optional exercise 5
 
 Create a another GitHub repository following the instructions under the title **"…or create a new repository on the command line"**.
 
@@ -231,11 +233,11 @@ Create a another GitHub repository following the instructions under the title **
 
 :::::::::::::::: solution
 
-Go to your GitHub area (https://github.com/[yourgithubname], choose the "Repositories" tab and click on New.
+Go to your GitHub area (`https://github.com/[yourgithubname]`), choose the "Repositories" tab and click on New.
 
 Choose `git-example-web` as the repository and leave other options as they are. This will generate an instruction page, and you can copy the commands under the title **"…or create a new repository on the command line"**.
 
-You will notice that the commands are the same what we have done above. You can use it if you start from an empty directory.
+You will notice that the commands are the same what we have done above. You can use these commands if you start from an empty directory.
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -266,7 +268,7 @@ What is the remote for this local repository?
 
 :::::::::::::::: solution
 
-Git has created a new directory with the chosen name. Move to it and check the remote.
+Git has created a new directory with the chosen name. First, move to it and then check the remote.
 
 ```bash
 cd git-example-friend/
@@ -296,7 +298,7 @@ You can check the branch with
 git branch
 ```
 
-The star indicates in which branch you are in.
+The star indicates in which branch you are.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -323,14 +325,37 @@ git commit -m "[yourname]: some descriptive message"
 git push origin [yourname]-new-feature
 ```
 
+Did you get an error? Ask your friend to invite you as a collaborator in the repository from Settings -> Collaborators and teams -> Add people.
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+In the GitHub Web UI of the repository, a message about recent pushes has now appeared. You can now open a pull request from the new branch to the main branch.
+
+Click on Compare and pull.
+
+Describe the pull request in the text field.
+
+Then click on Pull.
+
+You can then explore the changes, and add some discussion.
+
+There is an option to review changes and approve them. It can be set as obligatory in the repository settings.
+
+Usually, the owner of the project merges the pull request.
+
+Once the pull request is merged, remember to update your local repository.
+Do the following:
+
+```bash 
+git checkout master
+git pull
+```
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Optional exercise
+### Optional exercise 8
 
 Try this for fun:
 - create a Git repository on your university account (or lxplus at CERN if you have an account), add and commit some files in it.
@@ -338,18 +363,22 @@ Try this for fun:
 - check the remote repository address on your laptop
 - try if you can push changes from your laptop to the remote on your university account.
 
+
 :::::::::::::::: solution
 
 Note that this not necessarily what you would ever do, but it illustrates that Git is completely independent from GitHub or GitLab.
 
-Note also that Git does not allow to push to a branch that is checked out in the remote repository. You will have to push in another branch.
+Note also that Git does not allow to push to a branch that is checked out in the remote repository. You will have to push to another branch.
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - You can turn any directory to a versioned code repository with Git.
-- You can upload the content of a local repository to a remote repository such as GitHub. 
+- You can upload the content of a local repository to a remote repository such as GitHub.
+- You can contribute to other Git repositories. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
