@@ -41,7 +41,7 @@ You should learn Git to be able to contribute to common projects.
 
 ## What can I learn here?
 
-This is not intended as a full tutorial: you will get familiar with some basic concepts, and do some basic hands-on exercising to gain confidence with Git. You will find links to full-fledged lessons, there are many of them!
+This is not intended as a full tutorial: you will get familiar with some basic concepts, and do some hands-on exercising to gain confidence with Git. You will find links to full-fledged lessons, there are many of them!
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
