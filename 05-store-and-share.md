@@ -8,6 +8,8 @@ exercises: 30
 
 - How to upload your code to GitHub?
 - What information to add to make the code reusable?
+- How to contribute to someone's code?
+- How other people can contribute to your code?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -15,7 +17,9 @@ exercises: 30
 
 - Upload a Pythia example to a GitHub repository
 - Make sure that it contains all necessary information for its use
-- Test someone's else code and give feedback
+- Test someone's else code and propose improvement
+- Provide improvement through pull requests
+- Review and approve pull requests to your code
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -99,7 +103,7 @@ Check the status:
 git status
 ```
 
-Note that the executable file defined in the `.gitignore` file does not appear in the list. 
+Note that the executable file defined in the `.gitignore` file does not appear in the list. Git ignores it as the name says.
 
 Always make sure to add only the files that you want to commit and in case some unwanted file appear in the list of `Untracked files`, add them to `.gitignore` (or remove if you do not need them).
 
@@ -210,7 +214,7 @@ Follow the instructions in the README to understand the code, and to compile and
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## Contribute to code
+## Contribute to someone's code
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -257,101 +261,97 @@ To contribute, there are two approaches:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Provide a fix to the issue you proposed
+### Provide a fix to the issue you described
 
 As the code is in someone's personal GitHub area, fork and pull approach seems appropriate. You do not need to be added as a collaborator to the repository to propose changes. It is up to them to accept your changes or not.
 
-Fork the code to your own GitHub area in the GitHub Web UI. Change the remote of your existing Git repository (or remove the local and clone it now from your fork...)
+Fork the code to your own GitHub area in the GitHub Web UI. Change the remote of your existing Git repository.
 
 
 :::::::::::::::: solution
 
-...
+In the GitHub Web UI, find the "Fork" button in the GitHub repository to which you want to contribute. Create a fork.
 
-:::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::
+Then connect your local repository to that for:
 
-## Using branches
-
-If you are using GitHub as a remote storage for your code and you are the only contributor, you will most likely push your changes to the `main` branch.
-
-However, when you contribute to other remote repositories, you would always use a branch of your own which can then be merged to the remote repo `main` branch.
-
-In the `git-example-friend` repository, create a new branch:
-
-```
-git checkout -b [yourname]-new-feature
-```
-
-You are free to choose a name, but it is useful agree on some rules or practices in a project with several contributors. A common choice is something with your name and something that indicates what this branch is for.
-
-You can check the branch with
-
-```
-git branch
-```
-
-The star indicates in which branch you are.
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-### Exercise 7
-
-Create a new file in the repository, add and commit it locally and then push it to the remote repository.
-
-**Note**: instead of `main` in `git push origin main`, you will now use your new branch name.
-
-:::::::::::::::: solution
-
-Create a file
+**Either** change the `origin` of your existing local repository (cloned directly from its original area) and check the eventual updates
 
 ```bash
-echo sometext > yourname-file.txt
+git remote rm origin
+git remote add git@github.com:[yourgithubname]/[repositoryname].git
+git pull origin main
 ```
 
-Check the status, add, commit and push:
+
+**or** remove the existiing local repository (`rm -rf`) and clone it again from your fork.
+
+Then fix the issue in your local repository. 
+
+If it is in the code, compile and run (remember, in the container!!)
+
+Check status:
 
 ```bash
 git status
-git add .
-git commit -m "[yourname]: some descriptive message"
-git push origin [yourname]-new-feature
 ```
 
-Did you get an error? Ask your friend to invite you as a collaborator in the repository from Settings -> Collaborators and teams -> Add people.
+Add and commit:
+
+```bash
+git add .
+git commit -m "Update nnn, closes #[issuenumber]"
+```
+
+Push to the remote repository which is now your fork:
+
+```bash
+git push origin main
+```
+
+In the GitHub Web UI of your forked repository, will find a message about number of commits ahead. 
+
+Click on Contribute and click on the green button "Open pull request".
+
+Check that the base repository is what you want.
+
+Add a description and click on the green button "Create pull request".
+
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-In the GitHub Web UI of the repository, a message about recent pushes has now appeared. You can now open a pull request from the new branch to the main branch.
 
-Click on Compare and pull.
+::::::::::::::::::::::::::::::::::::: challenge
 
-Describe the pull request in the text field.
+### Accept a pull request
 
-Then click on Pull.
+The pull request now appears in the repository to which you contributed.
+Maybe someone has forked your repository and proposes a pull request.
 
-You can then explore the changes, and add some discussion.
+Review and accept the pull request
 
-There is an option to review changes and approve them. It can be set as obligatory in the repository settings.
+:::::::::::::::: solution
 
-Usually, the owner of the project merges the pull request.
+In the GitHub Web UI of the repository, find the list of pull requests.
 
-Once the pull request is merged, remember to update your local repository.
-Do the following:
+Choose the pull request.
 
-```bash 
-git checkout master
-git pull
-```
+In the "Files changed" tab, you can see the changes.
 
+Find the green "Review changes" button on the right. You can comment, and as the owner of the repository, approve or request changes.
 
+In the "Conversation" tab, you can "Merge pull request" and "Confirm merge".
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- It is easy to store and share your code throug a GitHub.
-- Clear instructions make it possible for other people to run your code. 
+- It is easy to store and share your code through a GitHub repository.
+- Clear instructions make it possible for other people to run your code.
+- You can contribute to other repositories from your own fork, or directly to the repository if you are added as a collaborator.
+- Other people can contribute to your repository through pull requests from their own fork.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
