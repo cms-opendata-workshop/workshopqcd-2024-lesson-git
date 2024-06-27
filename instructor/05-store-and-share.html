@@ -244,8 +244,7 @@
       <div class="accordion-body">
         <ul><li><a href="#create-a-github-repository-for-your-pythia-code">Create a GitHub repository for your Pythia code</a></li>
 <li><a href="#run-someones-code">Run someone’s code</a></li>
-<li><a href="#contribute-to-code">Contribute to code</a></li>
-<li><a href="#using-branches">Using branches</a></li>
+<li><a href="#contribute-to-someones-code">Contribute to someone’s code</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -333,6 +332,8 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>How to upload your code to GitHub?</li>
 <li>What information to add to make the code reusable?</li>
+<li>How to contribute to someone’s code?</li>
+<li>How other people can contribute to your code?</li>
 </ul></div>
 </div>
 </div>
@@ -343,7 +344,9 @@
 <ul><li>Upload a Pythia example to a GitHub repository</li>
 <li>Make sure that it contains all necessary information for its
 use</li>
-<li>Test someone’s else code and give feedback</li>
+<li>Test someone’s else code and propose improvement</li>
+<li>Provide improvement through pull requests</li>
+<li>Review and approve pull requests to your code</li>
 </ul></div>
 </div>
 </div>
@@ -462,7 +465,7 @@ usual <code>ls</code> commands, use <code>ls -a</code> to see them.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
 </div>
 <p>Note that the executable file defined in the <code>.gitignore</code>
-file does not appear in the list.</p>
+file does not appear in the list. Git ignores it as the name says.</p>
 <p>Always make sure to add only the files that you want to commit and in
 case some unwanted file appear in the list of
 <code>Untracked files</code>, add them to <code>.gitignore</code> (or
@@ -611,7 +614,7 @@ compile and run it. Is the output as expected?</p>
 </div>
 </div>
 </div>
-</section><section id="contribute-to-code"><h2 class="section-heading">Contribute to code<a class="anchor" aria-label="anchor" href="#contribute-to-code"></a>
+</section><section id="contribute-to-someones-code"><h2 class="section-heading">Contribute to someone’s code<a class="anchor" aria-label="anchor" href="#contribute-to-someones-code"></a>
 </h2>
 <hr class="half-width"><div id="open-a-github-issue-to-suggest-improvements" class="callout challenge">
 <div class="callout-square">
@@ -689,12 +692,12 @@ on private projects.</em></p>
 </div>
 </div>
 </div>
-<div id="provide-a-fix-to-the-issue-you-proposed" class="callout challenge">
+<div id="provide-a-fix-to-the-issue-you-described" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="provide-a-fix-to-the-issue-you-proposed" class="callout-inner">
-<h3 class="callout-title">Provide a fix to the issue you proposed<a class="anchor" aria-label="anchor" href="#provide-a-fix-to-the-issue-you-proposed"></a>
+<div id="provide-a-fix-to-the-issue-you-described" class="callout-inner">
+<h3 class="callout-title">Provide a fix to the issue you described<a class="anchor" aria-label="anchor" href="#provide-a-fix-to-the-issue-you-described"></a>
 </h3>
 <div class="callout-content">
 <p>As the code is in someone’s personal GitHub area, fork and pull
@@ -702,8 +705,7 @@ approach seems appropriate. You do not need to be added as a
 collaborator to the repository to propose changes. It is up to them to
 accept your changes or not.</p>
 <p>Fork the code to your own GitHub area in the GitHub Web UI. Change
-the remote of your existing Git repository (or remove the local and
-clone it now from your fork…)</p>
+the remote of your existing Git repository.</p>
 </div>
 </div>
 </div>
@@ -714,42 +716,66 @@ clone it now from your fork…)</p>
 </button>
 <div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
-<p>…</p>
+<p>In the GitHub Web UI, find the “Fork” button in the GitHub repository
+to which you want to contribute. Create a fork.</p>
+<p>Then connect your local repository to that for:</p>
+<p><strong>Either</strong> change the <code>origin</code> of your
+existing local repository (cloned directly from its original area) and
+check the eventual updates</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">git</span> remote rm origin</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">git</span> remote add git@github.com:<span class="pp">[</span><span class="ss">yourgithubname</span><span class="pp">]</span>/<span class="pp">[</span><span class="ss">repositoryname</span><span class="pp">]</span>.git</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre>
+</div>
+<p><strong>or</strong> remove the existiing local repository
+(<code>rm -rf</code>) and clone it again from your fork.</p>
+<p>Then fix the issue in your local repository.</p>
+<p>If it is in the code, compile and run (remember, in the
+container!!)</p>
+<p>Check status:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
+</div>
+<p>Add and commit:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update nnn, closes #[issuenumber]"</span></span></code></pre>
+</div>
+<p>Push to the remote repository which is now your fork:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre>
+</div>
+<p>In the GitHub Web UI of your forked repository, will find a message
+about number of commits ahead.</p>
+<p>Click on Contribute and click on the green button “Open pull
+request”.</p>
+<p>Check that the base repository is what you want.</p>
+<p>Add a description and click on the green button “Create pull
+request”.</p>
 </div>
 </div>
 </div>
 </div>
-</section><section id="using-branches"><h2 class="section-heading">Using branches<a class="anchor" aria-label="anchor" href="#using-branches"></a>
-</h2>
-<hr class="half-width"><p>If you are using GitHub as a remote storage for your code and you are
-the only contributor, you will most likely push your changes to the
-<code>main</code> branch.</p>
-<p>However, when you contribute to other remote repositories, you would
-always use a branch of your own which can then be merged to the remote
-repo <code>main</code> branch.</p>
-<p>In the <code>git-example-friend</code> repository, create a new
-branch:</p>
-<pre><code>git checkout -b [yourname]-new-feature</code></pre>
-<p>You are free to choose a name, but it is useful agree on some rules
-or practices in a project with several contributors. A common choice is
-something with your name and something that indicates what this branch
-is for.</p>
-<p>You can check the branch with</p>
-<pre><code>git branch</code></pre>
-<p>The star indicates in which branch you are.</p>
-<div id="exercise-7" class="callout challenge">
+<div id="accept-a-pull-request" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="exercise-7" class="callout-inner">
-<h3 class="callout-title">Exercise 7<a class="anchor" aria-label="anchor" href="#exercise-7"></a>
+<div id="accept-a-pull-request" class="callout-inner">
+<h3 class="callout-title">Accept a pull request<a class="anchor" aria-label="anchor" href="#accept-a-pull-request"></a>
 </h3>
 <div class="callout-content">
-<p>Create a new file in the repository, add and commit it locally and
-then push it to the remote repository.</p>
-<p><strong>Note</strong>: instead of <code>main</code> in
-<code>git push origin main</code>, you will now use your new branch
-name.</p>
+<p>The pull request now appears in the repository to which you
+contributed. Maybe someone has forked your repository and proposes a
+pull request.</p>
+<p>Review and accept the pull request</p>
 </div>
 </div>
 </div>
@@ -760,45 +786,17 @@ name.</p>
 </button>
 <div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
-<p>Create a file</p>
-<div class="codewrapper sourceCode" id="cb14">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">echo</span> sometext <span class="op">&gt;</span> yourname-file.txt</span></code></pre>
-</div>
-<p>Check the status, add, commit and push:</p>
-<div class="codewrapper sourceCode" id="cb15">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"[yourname]: some descriptive message"</span></span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="fu">git</span> push origin <span class="pp">[</span><span class="ss">yourname</span><span class="pp">]</span>-new-feature</span></code></pre>
-</div>
-<p>Did you get an error? Ask your friend to invite you as a collaborator
-in the repository from Settings -&gt; Collaborators and teams -&gt; Add
-people.</p>
+<p>In the GitHub Web UI of the repository, find the list of pull
+requests.</p>
+<p>Choose the pull request.</p>
+<p>In the “Files changed” tab, you can see the changes.</p>
+<p>Find the green “Review changes” button on the right. You can comment,
+and as the owner of the repository, approve or request changes.</p>
+<p>In the “Conversation” tab, you can “Merge pull request” and “Confirm
+merge”.</p>
 </div>
 </div>
 </div>
-</div>
-<p>In the GitHub Web UI of the repository, a message about recent pushes
-has now appeared. You can now open a pull request from the new branch to
-the main branch.</p>
-<p>Click on Compare and pull.</p>
-<p>Describe the pull request in the text field.</p>
-<p>Then click on Pull.</p>
-<p>You can then explore the changes, and add some discussion.</p>
-<p>There is an option to review changes and approve them. It can be set
-as obligatory in the repository settings.</p>
-<p>Usually, the owner of the project merges the pull request.</p>
-<p>Once the pull request is merged, remember to update your local
-repository. Do the following:</p>
-<div class="codewrapper sourceCode" id="cb16">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">git</span> checkout master</span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre>
 </div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -808,9 +806,14 @@ repository. Do the following:</p>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>It is easy to store and share your code throug a GitHub.</li>
+<ul><li>It is easy to store and share your code through a GitHub
+repository.</li>
 <li>Clear instructions make it possible for other people to run your
 code.</li>
+<li>You can contribute to other repositories from your own fork, or
+directly to the repository if you are added as a collaborator.</li>
+<li>Other people can contribute to your repository through pull requests
+from their own fork.</li>
 </ul></div>
 </div>
 </div>
