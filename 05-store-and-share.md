@@ -1,5 +1,5 @@
 ---
-title: "Exercises"
+title: "Store and share your code"
 teaching: 10
 exercises: 30
 ---
@@ -21,7 +21,7 @@ exercises: 30
 
 ## Create a GitHub repository for your Pythia code
 
-During the Pythia sessions, you have exercised with different examples.
+During the Pythia sessions, you have exercised with different examples. Upload one of them to GitHub.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -42,7 +42,8 @@ example_dir/
 └── outputs
 ```
 
-However, for the Pythia examples, the Makefile is written so that it expects the code files to be at the same level with it.
+However, for the Pythia examples, the Makefile is written so that it expects the code files to be at the same level with it. So leave it flat for now.
+
 Move to the directory and initialize it with
 
 ```bash
@@ -98,7 +99,9 @@ Check the status:
 git status
 ```
 
-Note that the executable file defined in the `.gitignore` file does not appear in the list. However, always make sure to add only the files that you want to commit and in case some unwanted file appear in the list of `Untracked files`, add them to `.gitignore` (or remove if you do not need them).
+Note that the executable file defined in the `.gitignore` file does not appear in the list. 
+
+Always make sure to add only the files that you want to commit and in case some unwanted file appear in the list of `Untracked files`, add them to `.gitignore` (or remove if you do not need them).
 
 Add and commit:
 
@@ -129,7 +132,7 @@ git branch -M main
 git push -u origin main
 ```
 
-Note that your the SSH key connected to GitHub is in your local file system, and it is not in the directory that is shared with the container. Therefore, you will not be able to push to your GitHub repository from the container. Do it from your local shell.
+Note that the SSH key connected to GitHub is in your local file system, and it is not in the directory that is shared with the container. Therefore, you will not be able to push to your GitHub repository from the container. Do it from your local shell.
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -144,11 +147,15 @@ Add instructions to your repository so that other people know what your code doe
 
 Good instructions should contain
 
-a brief description of the code
-description of the running environment
-description of the input parameters
-instructions to compile and run
-description of the expected output
+**a brief description of the code**
+
+**description of the running environment**
+
+**description of the input parameters**
+
+**instructions to compile and run**
+
+**description of the expected output**
 
 Write them in a new file called `README.md`. 
 
@@ -176,11 +183,11 @@ git push origin main
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-
+## Run someone else's code
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Clone a repository of someone else and run their code
+### Clone someone else's repository and run their code
 
 Ask other participants the address of their GitHub repository and clone it locally. 
 
@@ -197,6 +204,8 @@ If their repository name is same as yours, give it another name locally:
 ```bash
 git clone git@github.com:[someoneelse]/[repositoryname].git [localrepositoryname]
 ```
+
+Follow the instructions in the README to understand the code, and to compile and run it. Is the output as expected?
 
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
