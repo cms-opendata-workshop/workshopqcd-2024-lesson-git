@@ -17,8 +17,8 @@ exercises: 30
 
 - Upload a Pythia example to a GitHub repository
 - Make sure that it contains all necessary information for its use
-- Test someone's else code and propose improvement
-- Provide improvement through pull requests
+- Test someone's code and propose improvements
+- Contribute to the code through pull requests
 - Review and approve pull requests to your code
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -31,11 +31,11 @@ During the Pythia sessions, you have exercised with different examples. Upload o
 
 ### Prepare a local repository
 
-Create a local Git repository under your work directory for one of the examples. 
+Create a local Git repository under your Pythia working directory for one of the examples. 
 
 :::::::::::::::: solution
 
-Make sure that the directory has all necessary files to run the example.
+Make sure that the directory has all necessary files to run the example. Make a separate directory without other file if needed.
 In general, it is a good practice to structure it so that it has subdirectoris for code, inputs and outputs:
 
 ```
@@ -54,7 +54,7 @@ Move to the directory and initialize it with
 git init
 ```
 
-Move all necessary files to this directory and test that everything works, i.e compile and run the code.
+Test that everything works, i.e compile and run the code.
 
 Remember to compile and run the code in the Pythia container. Start it from the working repository with
 
@@ -193,7 +193,7 @@ git push origin main
 
 ### Clone someone's repository and run their code
 
-Ask other participants the address of their GitHub repository and clone it locally. 
+Ask other participant the address of their GitHub repository and clone it locally. 
 
 **Note**: first move up from your Git repository. Do not nest Git repositories.
 
@@ -283,7 +283,7 @@ git pull origin main
 ```
 
 
-**or** remove the existiing local repository (`rm -rf`) and clone it again from your fork.
+**or** remove the existing local repository (`rm -rf`) and clone it again from your fork.
 
 Then fix the issue in your local repository. 
 
@@ -299,7 +299,7 @@ Add and commit:
 
 ```bash
 git add .
-git commit -m "Update nnn, closes #[issuenumber]"
+git commit -m "describe the change"
 ```
 
 Push to the remote repository which is now your fork:
@@ -314,7 +314,11 @@ Click on Contribute and click on the green button "Open pull request".
 
 Check that the base repository is what you want.
 
-Add a description and click on the green button "Create pull request".
+Modify the title if needed and a description.
+
+If you add `closes #[issuenumber]` in the title or in the description, the issue will get closed automatically once once the pull request is merged.  You can find the issue number in the in the list of issues in the GitHub Web UI.
+
+Click on the green button "Create pull request".
 
 
 :::::::::::::::::::::::::
@@ -325,7 +329,8 @@ Add a description and click on the green button "Create pull request".
 
 ### Accept a pull request
 
-The pull request now appears in the repository to which you contributed.
+The pull request appears in the repository to which you contributed.
+
 Maybe someone has forked your repository and proposes a pull request.
 
 Review and accept the pull request
@@ -336,7 +341,9 @@ In the GitHub Web UI of the repository, find the list of pull requests.
 
 Choose the pull request.
 
-In the "Files changed" tab, you can see the changes.
+In the "Files changed" tab, you can see the changes. 
+
+You can open a comment for a specific line in the changes by clicking on `+` at the start of the line.
 
 Find the green "Review changes" button on the right. You can comment, and as the owner of the repository, approve or request changes.
 
