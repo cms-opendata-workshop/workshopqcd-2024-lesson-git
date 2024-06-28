@@ -272,8 +272,6 @@ Fork the code to your own GitHub area in the GitHub Web UI. Change the remote of
 
 In the GitHub Web UI, find the "Fork" button in the GitHub repository to which you want to contribute. Create a fork.
 
-See the screenshots in the [W3Schools GitHub fork lesson](https://www.w3schools.com/git/git_remote_fork.asp?remote=github) if needed.
-
 Then connect your local repository to that for:
 
 **Either** change the `origin` of your existing local repository (cloned directly from its original area) and check the eventual updates
